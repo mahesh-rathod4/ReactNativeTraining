@@ -19,7 +19,7 @@ function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Redux">
+        <Stack.Navigator initialRouteName="Login">
           <Stack.Screen
             name="Login"
             component={LoginScreen}

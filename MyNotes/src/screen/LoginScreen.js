@@ -30,7 +30,7 @@ export default function LoginScreen({navigation}) {
         const token = response.data.token;
         console.log(token);
         if (response.status === 200) {
-          navigation.navigate('Home');
+          navigation.navigate('Users');
         } else {
         }
       })
