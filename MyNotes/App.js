@@ -8,18 +8,19 @@ import LoginScreen from './src/screen/LoginScreen';
 import SignUpScreen from './src/screen/SignUpScreen';
 import HomeScreen from './src/screen/HomeScreen';
 import EditScreen from './src/screen/EditScreen';
-import ReduxUsers from './src/screen/ReduxUsers';
+import ReduxUsers from './src/Core/Dashboard/ReduxUsers';
 import ReduxEditScreen from './src/screen/ReduxEditUser';
 import {Provider} from 'react-redux';
-import {store} from './src/redux/store';
+import {configureStore} from './src/redux/store';
 
 const Stack = createNativeStackNavigator();
+const store = configureStore();
 
 function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Login">
+        <Stack.Navigator initialRouteName="Redux">
           <Stack.Screen
             name="Login"
             component={LoginScreen}
