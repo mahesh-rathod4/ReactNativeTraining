@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import {View, Text, StyleSheet, TextInput} from 'react-native';
 import GlobalStyle from '../utils/GlobalStyle';
 import {useSelector, useDispatch} from 'react-redux';
-import {setName} from '../redux/actions';
 import CustomButton from '../components/CustomButton';
 import UITextField from '../components/UITextField';
 import axios from 'axios';
@@ -14,7 +13,6 @@ export default function LoginScreen({navigation}) {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoading, setLoading] = useState(true);
 
   const onTapBtnLogin = () => {
     const payload = {

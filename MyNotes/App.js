@@ -9,6 +9,7 @@ import SignUpScreen from './src/screen/SignUpScreen';
 import HomeScreen from './src/screen/HomeScreen';
 import EditScreen from './src/screen/EditScreen';
 import ReduxUsers from './src/Core/Dashboard/ReduxUsers';
+import Login from './src/Core/Login/login';
 import ReduxEditScreen from './src/screen/ReduxEditUser';
 import {Provider} from 'react-redux';
 import {configureStore} from './src/redux/store';
@@ -20,10 +21,15 @@ function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Redux">
+        <Stack.Navigator initialRouteName="LoginClass">
           <Stack.Screen
             name="Login"
             component={LoginScreen}
+            options={{headerShown: false}}
+          />
+          <Stack.Screen
+            name="LoginClass"
+            component={Login}
             options={{headerShown: false}}
           />
           <Stack.Screen
