@@ -16,18 +16,15 @@ export class Login extends Component {
   }
 
   onTapBtnLogin = () => {
-    // let email = this.state.email;
-    // let password = this.state.password;
-    let email = 'eve.holt@reqres.in';
-    let password = 'cityslicka';
+    let email = this.state.email;
+    let password = this.state.password;
     let data = {email, password};
-
     this.props.dispatch(loginUser(data));
   };
 
   updateUI() {
     if (this.props.users.length > 0) {
-      this.props.navigation.navigate('Users');
+      this.props.navigation.navigate('Redux');
     }
   }
 

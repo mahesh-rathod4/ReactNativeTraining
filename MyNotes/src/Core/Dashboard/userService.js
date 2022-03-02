@@ -6,7 +6,7 @@ export default class userService {
     const uri = API_BASE_URL + 'api/users?page=1';
     return fetch(uri, {
       method: 'GET',
-    });
+    }).then(response => response.json());
   }
 
   static loginUser(email, password) {
@@ -18,7 +18,6 @@ export default class userService {
       },
       body: JSON.stringify({email: email, password: password}),
     };
-
     return fetch(url, {
       parameters,
     }).then(response => response.json());

@@ -1,23 +1,3 @@
-// export const loginUserService = request => {
-//   const LOGIN_API_ENDPOINT = 'https://reqres.in/login';
-
-//   const parameters = {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(request.user),
-//   };
-
-//   return fetch(LOGIN_API_ENDPOINT, parameters)
-//     .then(response => {
-//       return response.json();
-//     })
-//     .then(json => {
-//       return json;
-//     });
-// };
-
 export const userLogin = async user => {
   const response = await fetch('https://reqres.in/'.login, {
     method: 'POST',

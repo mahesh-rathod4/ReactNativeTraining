@@ -3,7 +3,7 @@ import loginScreenSaga from '../Core/Login/saga';
 import userSaga from '../Core/Dashboard/userSaga';
 
 function* rootSaga() {
-  yield all([loginScreenSaga(), userSaga]);
+  yield all([loginScreenSaga(), userSaga()]);
 }
 
 export default rootSaga;
